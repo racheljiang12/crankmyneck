@@ -193,19 +193,10 @@ body {
 }
 
 </style>
-<script type="text/javascript">
-    function hover(element) {
-  element.setAttribute('src', './gifs/vhshover.gif');
-}
-
-function unhover(element) {
-  element.setAttribute('src', './gifs/vhs.gif');
-}
-</script>
 
 </head>
 
-<body data-page_name="view_game" data-host="itch.io" class="locale_en game_layout responsive no_theme_toggle">
+<body data-page_name="view_game" data-host="itch.io" class="locale_en game_layout responsive no_theme_toggle" style="background-color: black;">
 
 
 
@@ -213,6 +204,8 @@ function unhover(element) {
   <source src="./videos/background.mov" >
   Your browser does not support HTML5 video.
 </video>
+
+
 
 
 
@@ -314,6 +307,8 @@ function myFunction() {
 </ul> -->
 <!-- <script type="text/javascript">new I.GameUserTools('#user_tools')</script>
  -->
+
+
  <div id="wrapper" class="main wrapper">
         <div class="inner_column size_large family_serif" id="inner_column">
                 <div class="header has_image align_center" id="header">
@@ -323,6 +318,24 @@ function myFunction() {
                             <div id="vhs"></div>
                        </a>
 
+<script type="text/javascript">
+
+    var video = document.getElementById("myVideo");
+
+    function hover(element) {
+  element.setAttribute('src', './gifs/vhshover.gif');
+  // video.setAttribute('src', './videos/hover.mov');
+  video.style.opacity = "0.25";
+  video.pause();
+}
+
+function unhover(element) {
+  element.setAttribute('src', './gifs/vhs.gif');
+  // video.setAttribute('src', './videos/background.mov')
+  video.style.opacity = "1";
+  video.play();
+}
+</script>
 
 </script>
 </body>
