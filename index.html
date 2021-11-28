@@ -193,6 +193,16 @@ body {
 }
 
 </style>
+<script type="text/javascript">
+    function hover(element) {
+  element.setAttribute('src', './gifs/vhshover.gif');
+}
+
+function unhover(element) {
+  element.setAttribute('src', './gifs/vhs.gif');
+}
+</script>
+
 </head>
 
 <body data-page_name="view_game" data-host="itch.io" class="locale_en game_layout responsive no_theme_toggle">
@@ -309,8 +319,9 @@ function myFunction() {
                 <div class="header has_image align_center" id="header">
                         <!-- <img alt="Haunted PS1 Demo Disc 2021" src="https://img.itch.zone/aW1nLzU0OTQwODEuZ2lm/original/7Q2zqw.gif"/> -->
                        <a href="https://youtu.be/e0TF1jn0Eis" target="_blank">
-                        <img id="vhs" alt="CRANK MY NECK (Animated Video)" src="./gifs/vhs.gif"/>
-                        </a>
+                        <img id="vhs" alt="CRANK MY NECK (Animated Video)" src="./gifs/vhs.gif"onmouseover="hover(this);" onmouseout="unhover(this);" />
+                            <div id="vhs"></div>
+                       </a>
 
 
 </script>
